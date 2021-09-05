@@ -1,0 +1,64 @@
+<html>
+  <head>
+      <!-- These meta tags are not necessary for the camera to work -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <title>Camera in browsers - pixo</title>
+
+    <!-- imports the webpage's stylesheet -->
+    <link rel="stylesheet" href="static/css/main.css">
+
+    <!-- imports the webpage's javascript file -->
+    <script src="static/scripts/main.js" defer></script>
+  </head>
+  <body>
+    <p>{{.Response}}</p>
+    <p>Powered by // go:embed</p>
+    <a href="/stream">Stream</a>
+    <br>
+    <p>P. Sherman<br>
+      42 Wallaby Way<br>
+      Sydney</p>
+
+      <div>
+        <br />
+            <input type="button" onclick="myFunction()" value="Show alert box" /><br>
+        <br />
+            <input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" /><br>
+        <br />
+            <input type="button" value="Show Version" onClick="showVersion('called within the html')" /><br>
+        <br />
+            <p id="version"></p><br>
+        <br />
+        </div>
+    
+    
+        <h1>Demo - Native camera in browsers</h1>
+
+        <br>   
+        <!-- The `label` is attached to the hidden file input -->
+        <label for="cameraFileInput">
+          <span class="btn">Load Photo</span>
+          <!-- The hidden file `input` for opening the native camera -->
+          <input
+            id="cameraFileInput"
+            type="file"
+            accept="image/*"
+            capture="environment"
+            onchange="readURL(this);"
+          />
+        </label>
+    
+        <!-- displays the picture uploaded from the native camera -->
+        <img id="pictureFromCamera" />
+
+        <div> 
+          <object type="text/html" data="http://127.0.0.1:6060/stream" width="800px" height="600px" style="overflow:auto;">
+          </object>
+       </div>
+
+  </body>
+</html>

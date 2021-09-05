@@ -1,0 +1,38 @@
+p {
+    color: coral;
+}
+
+#cameraFileInput {
+    display: none;
+  }
+  
+  #pictureFromCamera {
+    width: 100%;
+    height: auto;
+    margin-top: 16px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #00b531;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    filter: brightness(0.9);
+  }
+
+  body, html {
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #F89821;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 100px;
+  }
